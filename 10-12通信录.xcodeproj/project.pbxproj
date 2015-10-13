@@ -14,6 +14,9 @@
 		FA401B5E1BCBE623005DEF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA401B5C1BCBE623005DEF49 /* LaunchScreen.storyboard */; };
 		FA401B691BCBE624005DEF49 /* _0_12___Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA401B681BCBE624005DEF49 /* _0_12___Tests.swift */; };
 		FA401B741BCBE624005DEF49 /* _0_12___UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA401B731BCBE624005DEF49 /* _0_12___UITests.swift */; };
+		FA401B841BCBEACF005DEF49 /* LJTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA401B831BCBEACF005DEF49 /* LJTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FA401B861BCBECB1005DEF49 /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA401B851BCBECB1005DEF49 /* person.swift */; settings = {ASSET_TAGS = (); }; };
+		FA401B881BCC05A1005DEF49 /* LJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA401B871BCC05A1005DEF49 /* LJTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		FA401B6F1BCBE624005DEF49 /* 10-12通信录UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10-12通信录UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA401B731BCBE624005DEF49 /* _0_12___UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_0_12___UITests.swift"; sourceTree = "<group>"; };
 		FA401B751BCBE624005DEF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA401B831BCBEACF005DEF49 /* LJTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTableViewController.swift; sourceTree = "<group>"; };
+		FA401B851BCBECB1005DEF49 /* person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = person.swift; sourceTree = "<group>"; };
+		FA401B871BCC05A1005DEF49 /* LJTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				FA401B531BCBE623005DEF49 /* AppDelegate.swift */,
 				FA401B551BCBE623005DEF49 /* ViewController.swift */,
+				FA401B831BCBEACF005DEF49 /* LJTableViewController.swift */,
+				FA401B871BCC05A1005DEF49 /* LJTableViewCell.swift */,
+				FA401B851BCBECB1005DEF49 /* person.swift */,
 				FA401B571BCBE623005DEF49 /* Main.storyboard */,
 				FA401B5A1BCBE623005DEF49 /* Assets.xcassets */,
 				FA401B5C1BCBE623005DEF49 /* LaunchScreen.storyboard */,
@@ -256,7 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA401B561BCBE623005DEF49 /* ViewController.swift in Sources */,
+				FA401B881BCC05A1005DEF49 /* LJTableViewCell.swift in Sources */,
 				FA401B541BCBE623005DEF49 /* AppDelegate.swift in Sources */,
+				FA401B861BCBECB1005DEF49 /* person.swift in Sources */,
+				FA401B841BCBEACF005DEF49 /* LJTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +495,7 @@
 				FA401B7A1BCBE624005DEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA401B7B1BCBE624005DEF49 /* Build configuration list for PBXNativeTarget "10-12通信录Tests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +504,7 @@
 				FA401B7D1BCBE624005DEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA401B7E1BCBE624005DEF49 /* Build configuration list for PBXNativeTarget "10-12通信录UITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +513,7 @@
 				FA401B801BCBE624005DEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

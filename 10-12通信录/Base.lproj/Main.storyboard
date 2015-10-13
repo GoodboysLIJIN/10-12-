@@ -1,25 +1,142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XNc-hT-NGH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--个人通信录-->
+        <scene sceneID="A4q-BG-WVG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="pnN-vL-bdG" customClass="LJTableViewController" customModule="_0_12通信录" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZaO-2j-VCM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="83" id="v1R-qV-LUz" customClass="LJTableViewCell" customModule="_0_12通信录" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v1R-qV-LUz" id="Vzu-fB-0EU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dne-aw-nE5">
+                                            <rect key="frame" x="30" y="0.0" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="9fw-cd-N94"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1i-fZ-xzp">
+                                            <rect key="frame" x="30" y="45" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Fgt-rI-UYh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e1i-fZ-xzp" firstAttribute="leading" secondItem="Vzu-fB-0EU" secondAttribute="leadingMargin" constant="22" id="5ho-kb-idS"/>
+                                        <constraint firstItem="Dne-aw-nE5" firstAttribute="leading" secondItem="Vzu-fB-0EU" secondAttribute="leading" constant="30" id="cFG-aN-HQe"/>
+                                        <constraint firstItem="e1i-fZ-xzp" firstAttribute="top" secondItem="Dne-aw-nE5" secondAttribute="bottom" constant="24" id="h2h-30-XE6"/>
+                                        <constraint firstItem="Dne-aw-nE5" firstAttribute="top" secondItem="Vzu-fB-0EU" secondAttribute="top" id="ooh-2O-pkw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detalabel" destination="e1i-fZ-xzp" id="Xok-7l-h1V"/>
+                                    <outlet property="namelabel" destination="Dne-aw-nE5" id="IZV-JV-TBa"/>
+                                    <segue destination="rPV-1w-Z78" kind="show" id="cf8-LS-ybB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pnN-vL-bdG" id="zS8-Rz-XZN"/>
+                            <outlet property="delegate" destination="pnN-vL-bdG" id="BAD-c1-ums"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="个人通信录" id="VQd-wQ-MkW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaI-8S-BER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1445" y="-67"/>
+        </scene>
+        <!--个人明细-->
+        <scene sceneID="ti1-Le-bhL">
+            <objects>
+                <viewController id="rPV-1w-Z78" customClass="ViewController" customModule="_0_12通信录" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gWb-tz-k1E"/>
+                        <viewControllerLayoutGuide type="bottom" id="bco-Zl-67C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gtb-um-oYg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入名字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDe-cf-UX9">
+                                <rect key="frame" x="10" y="80" width="580" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textaction:" destination="rPV-1w-Z78" eventType="editingChanged" id="Dbh-oR-Bdr"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入年龄" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJc-Vf-UOC">
+                                <rect key="frame" x="10" y="128" width="580" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textaction:" destination="rPV-1w-Z78" eventType="editingChanged" id="n9L-0D-UWP"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gJc-Vf-UOC" secondAttribute="trailing" constant="10" id="CZg-L7-NhQ"/>
+                            <constraint firstItem="gJc-Vf-UOC" firstAttribute="top" secondItem="VDe-cf-UX9" secondAttribute="bottom" constant="18" id="dVg-Ga-gCl"/>
+                            <constraint firstItem="VDe-cf-UX9" firstAttribute="leading" secondItem="Gtb-um-oYg" secondAttribute="leading" constant="10" id="dmg-1H-Pxm"/>
+                            <constraint firstItem="gJc-Vf-UOC" firstAttribute="leading" secondItem="Gtb-um-oYg" secondAttribute="leading" constant="10" id="hTg-c6-kzX"/>
+                            <constraint firstItem="VDe-cf-UX9" firstAttribute="top" secondItem="gWb-tz-k1E" secondAttribute="bottom" constant="16" id="iWK-CF-lTu"/>
+                            <constraint firstAttribute="trailing" secondItem="VDe-cf-UX9" secondAttribute="trailing" constant="10" id="wPk-EM-aRs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人明细" id="Axl-5K-2ak">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="保存" id="f2G-Zi-FRt">
+                            <connections>
+                                <action selector="savedata" destination="rPV-1w-Z78" id="rzH-7f-D5P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="agetitle" destination="gJc-Vf-UOC" id="gbZ-tS-VKP"/>
+                        <outlet property="nametitle" destination="VDe-cf-UX9" id="7B8-nq-9l4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nc-MD-6nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IkL-9T-LHe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XNc-hT-NGH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac0-u6-OF7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pnN-vL-bdG" kind="relationship" relationship="rootViewController" id="dzn-rp-l0x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQw-LT-eYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="0.0"/>
         </scene>
     </scenes>
 </document>

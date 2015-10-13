@@ -9,10 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var personB: person?
+    
+    var didsavedata: (()->())?
+    
+    @IBOutlet weak var nametitle: UITextField!
+    
+    @IBOutlet weak var agetitle: UITextField!
 
+    @IBAction func savedata() {
+        
+        personB?.name = nametitle.text
+        
+        personB?.age = Int(agetitle.text!) ?? 0
+        
+        didsavedata?()
+        
+        navigationController?.popToRootViewControllerAnimated(true)
+        
+        
+    }
+    
+    @IBAction func textaction(sender: AnyObject) {
+        
+        navigationItem.rightBarButtonItem?.enabled = nametitle.hasText() && agetitle.hasText()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        nametitle.text = personB?.name
+        
+        agetitle.text = "\(personB?.age ?? 0)"
+        
+        textaction(personB ?? 0)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
